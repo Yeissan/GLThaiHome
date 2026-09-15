@@ -1,1 +1,106 @@
-
+*{box-sizing:border-box}
+:root{
+  color-scheme:dark;
+  --bg:#0f0a12;
+  --panel:#171019;
+  --panel2:#201522;
+  --line:#38233d;
+  --text:#fff8fc;
+  --muted:#c9b7c4;
+  --accent:#ff78ad;
+}
+html,body{
+  margin:0;
+  min-height:100%;
+  background:
+    radial-gradient(circle at top,#2a1627 0,#0f0a12 45%);
+  color:var(--text);
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+}
+body{padding:18px 14px 30px}
+.home{width:min(680px,100%);margin:0 auto}
+.hero{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:24px;
+  background:rgba(23,16,25,.94);
+}
+.hero-image{
+  display:block;
+  width:100%;
+  aspect-ratio:3/1;
+  object-fit:cover;
+  background:#241722;
+}
+.hero-body{padding:20px 18px 18px}
+.hero h1{
+  margin:0 0 7px;
+  font-size:30px;
+  line-height:1.05;
+}
+.hero p{
+  margin:0;
+  color:var(--muted);
+  line-height:1.5;
+  font-size:15px;
+}
+.menu{
+  display:grid;
+  gap:12px;
+  margin-top:16px;
+}
+.menu-button{
+  width:100%;
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 16px;
+  border-radius:18px;
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,var(--panel2),var(--panel));
+  color:var(--text);
+  text-decoration:none;
+  cursor:pointer;
+  text-align:left;
+}
+.menu-button:active{transform:scale(.99)}
+.icon{
+  width:48px;
+  height:48px;
+  flex:0 0 48px;
+  display:grid;
+  place-items:center;
+  border-radius:15px;
+  background:#2e1b31;
+  font-size:25px;
+}
+.button-copy{min-width:0;flex:1}
+.button-title{
+  display:block;
+  font-size:18px;
+  font-weight:800;
+  margin-bottom:3px;
+}
+.button-subtitle{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.35;
+}
+.arrow{
+  color:var(--accent);
+  font-size:24px;
+  flex:0 0 auto;
+}
+.footer{
+  text-align:center;
+  color:#8e7a89;
+  font-size:12px;
+  margin:18px 0 0;
+}
+@media(min-width:640px){
+  body{padding-top:28px}
+  .hero-body{padding:22px}
+  .menu-button{min-height:80px}
+}
